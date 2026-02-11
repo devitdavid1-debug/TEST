@@ -16,7 +16,7 @@ def update_playlist():
         data = response.json()
 
         # Get the best available stream
-        stream_url = data.get('videoUrlHls') or data.get('backupVideoUrlHls')
+        stream_url = data.get('backupVideoUrlHls') or data.get('videoUrlHls')
         
         if not stream_url:
             print("Error: No stream URL found in API response.")
